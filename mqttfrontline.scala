@@ -14,8 +14,12 @@ class MqttSample {
     .feed(csv("topics-and-payloads.csv"))
     .exec(mqtt("Connecting").connect)
     // .exec(mqtt("Subscribing").subscribe("${myTopic}"))
-    .exec(mqtt("Publishing").publish("proxyPoC").message(StringBody("MUDA"))
+    .during(10 seconds){
+        pace(0.1 second)
+        .exec(mqtt("Publishing").publish("proxyPoC").message(StringBody("MUDA"))
       .expect(100 milliseconds).check(jsonPath("$.error").notExists))
+    }
+    
 
   setUp(scn.inject(atOnceUsers(10))
     .protocols(mqttConf)
