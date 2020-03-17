@@ -1,0 +1,29 @@
+buildscript {
+  repositories {
+  mavenLocal()
+  jcenter()
+  }
+  dependencies {
+  classpath "io.gatling.frontline:frontline-gradle-plugin:1.0.0"
+  }
+}
+repositories {
+  mavenLocal()
+  jcenter()
+}
+apply plugin: "java"
+apply plugin: "scala"
+// so gradle can build a package for FrontLine
+apply plugin: "io.gatling.frontline.gradle"
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+dependencies {
+  testCompile "io.gatling.highcharts:gatling-chartshighcharts:3.3.1"
+  compile group: 'io.gatling', name: 'gatling-mqtt', version: '3.3.0'
+
+}
+tasks.withType(ScalaCompile) {
+  scalaCompileOptions.forkOptions.with {
+  jvmArgs = ['-Xss100M']
+  }
+}
