@@ -2,7 +2,7 @@ import scala.concurrent.duration._
 import io.gatling.core.Predef._
 import io.gatling.mqtt.Predef._
 
-class MqttSample {
+class MqttSample extends Simulation{
 
   private val mqttConf = mqtt
     .broker("172.31.20.201", 3700)
