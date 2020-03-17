@@ -11,7 +11,7 @@ class MqttSample extends Simulation{
     // .correlateBy(jsonPath("$.correlationId"))
 
   private val scn = scenario("MQTT Test")
-    .feed(csv("topics-and-payloads.csv"))
+    // .feed(csv("topics-and-payloads.csv"))
     .exec(mqtt("Connecting").connect)
     // .exec(mqtt("Subscribing").subscribe("${myTopic}"))
     .during(10 seconds){
