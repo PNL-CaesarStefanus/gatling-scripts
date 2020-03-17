@@ -1,3 +1,5 @@
+package.frontline.mqttsample
+
 import scala.concurrent.duration._
 import io.gatling.core.Predef._
 import io.gatling.mqtt.Predef._
