@@ -22,5 +22,5 @@ class MqttSample extends Simulation{
     
 
   setUp(scn.inject(atOnceUsers(10))
-    .protocols(mqttConf)
+  ).protocols(mqttConf)
 }
