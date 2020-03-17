@@ -59,7 +59,7 @@
           </execution>
         </executions>
       </plugin>
-          <plugin>
+          <!-- <plugin>
         <groupId>io.gatling.frontline</groupId>
         <artifactId>frontline-maven-plugin</artifactId>
         <version>${frontline-maven-plugin.version}</version>
@@ -70,7 +70,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin> -->
       <plugin>
         <groupId>io.gatling</groupId>
         <artifactId>gatling-maven-plugin</artifactId>
