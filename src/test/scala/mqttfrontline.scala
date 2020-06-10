@@ -8,6 +8,7 @@ class MqttSample extends Simulation {
 
   private val mqttConf = mqtt
     // .broker("172.31.20.201", 3700)
+    .broker("localhost", 9999)
     .clientId("test")
     .qosAtLeastOnce
     // .correlateBy(jsonPath("$.correlationId"))
