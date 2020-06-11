@@ -7,8 +7,8 @@ import io.gatling.mqtt.Predef._
 class MqttSample extends Simulation {
 
   private val mqttConf = mqtt
-    // .broker("172.31.20.201", 3700)
-    .broker("localhost", 9999)
+    .broker("172.31.32.99", 3700)
+    //.broker("localhost", 9999)
     .clientId("test")
     .qosAtLeastOnce
     // .correlateBy(jsonPath("$.correlationId"))
