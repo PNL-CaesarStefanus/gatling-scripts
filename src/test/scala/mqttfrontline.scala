@@ -7,6 +7,7 @@ import io.gatling.mqtt.Predef._
 class MqttSample extends Simulation {
 
   private val mqttConf = mqtt
+    .mqttVersion_3_1
     .broker("172.31.32.99", 3700)
     //.broker("localhost", 9999)
     .clientId("test")
