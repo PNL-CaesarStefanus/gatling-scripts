@@ -29,7 +29,7 @@
     <dependency>
       <groupId>io.gatling</groupId>
       <artifactId>gatling-mqtt</artifactId>
-      <version>3.3.0</version>
+      <version>3.4.0-M1</version>
     </dependency>
   </dependencies>
 
