@@ -26,6 +26,27 @@
       <version>${gatling.version}</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/io.gatling/gatling-http -->
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-http</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.gatling/gatling-core -->
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-core</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.gatling/gatling-netty-util -->
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-netty-util</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+
     <dependency>
       <groupId>io.gatling</groupId>
       <artifactId>gatling-mqtt</artifactId>
