@@ -5,7 +5,7 @@ import io.gatling.core.Predef._
 import io.gatling.mqtt.Predef._
 import io.gatling.http.Predef._
 
-class MqttSample extends Simulation {
+class LatestMqttSample extends Simulation {
 
   private val mqttConf = mqtt
     .mqttVersion_3_1
@@ -22,11 +22,13 @@ class MqttSample extends Simulation {
     // .feed(csv("topics-and-payloads.csv"))
     .exec(mqtt("Connecting").connect)
     // .exec(mqtt("Subscribing").subscribe("${myTopic}"))
+    /*
     .during(10 seconds){
         pace(0.1 second)
         .exec(mqtt("Publishing").publish("proxyPoC").message(StringBody("MUDA"))
       .expect(100 milliseconds).check(jsonPath("$.error").notExists))
     }
+    */
     
 
   //setUp(scn.inject(atOnceUsers(10))

@@ -12,8 +12,8 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <gatling.version>3.3.1</gatling.version>
-    <scala-maven-plugin.version>4.3.1</scala-maven-plugin.version>
+    <gatling.version>3.4.0-M1</gatling.version>
+    <scala-maven-plugin.version>4.4.0</scala-maven-plugin.version>
     <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
     <gatling-maven-plugin.version>3.0.5</gatling-maven-plugin.version>
     <frontline-maven-plugin.version>1.0.3</frontline-maven-plugin.version>
@@ -29,26 +29,26 @@
     <dependency>
       <groupId>io.gatling</groupId>
       <artifactId>gatling-mqtt</artifactId>
-      <version>3.3.1</version>
+      <version>3.4.0-M1</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/io.gatling/gatling-http -->
     <dependency>
       <groupId>io.gatling</groupId>
       <artifactId>gatling-http</artifactId>
-      <version>3.3.1</version>
+      <version>3.4.0-M1</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.gatling/gatling-core -->
     <dependency>
       <groupId>io.gatling</groupId>
       <artifactId>gatling-core</artifactId>
-      <version>3.3.1</version>
+      <version>${gatling.version}</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.gatling/gatling-netty-util -->
     <dependency>
       <groupId>io.gatling</groupId>
       <artifactId>gatling-netty-util</artifactId>
-      <version>3.3.1</version>
+      <version>3.4.0-M1</version>
     </dependency>
   </dependencies>
 
