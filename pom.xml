@@ -52,19 +52,19 @@
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.gatling.frontline/frontline-probe -->
     <dependency>
-      <groupId>io.gatling.frontline</groupId>
+      <groupId>io.gatling</groupId>
       <artifactId>frontline-probe</artifactId>
       <version>1.7.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.gatling.frontline/gatling-sigar -->
     <dependency>
-      <groupId>io.gatling.frontline</groupId>
+      <groupId>io.gatling</groupId>
       <artifactId>gatling-sigar</artifactId>
       <version>1.6.6</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.gatling.frontline/frontline-commons -->
     <dependency>
-      <groupId>io.gatling.frontline</groupId>
+      <groupId>io.gatling</groupId>
       <artifactId>frontline-commons</artifactId>
       <version>1.7.0</version>
     </dependency>
