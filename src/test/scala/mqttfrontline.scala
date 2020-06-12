@@ -14,9 +14,23 @@ class LatestMqttSample extends Simulation {
     //.broker("localhost", 9999)
     .useTls(true)
     .clientId("test")
+
+    .clientSession(true) //
+    .keepAlive(30) //
+
     .qosAtLeastOnce
+
+    .retain(true) //
+    .lastWill(LastWill("${willTopic}", StringBody("${willMessage}")).qosAtLeastOnce.retain(true)) //
+    .reconnectAttemptsMax(5) //
+    .reconnectDelay(1L) //
+    .reconnectBackoffMultiplier(1.5F) //
+    .resendDelay(1000) //
+    .resendBackoffMultiplier(2.0F) //
+
     .timeoutCheckInterval(10 second)
     // .correlateBy(jsonPath("$.correlationId"))
+    // all settings here?
 
   private val scn = scenario("MQTT Test")
     // .feed(csv("topics-and-payloads.csv"))
