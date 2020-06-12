@@ -21,7 +21,7 @@ class LatestMqttSample extends Simulation {
     .qosAtLeastOnce
 
     .retain(true) //
-    .lastWill(LastWill("${willTopic}", StringBody("${willMessage}")).qosAtLeastOnce.retain(true)) //
+    //.lastWill(LastWill("${willTopic}", StringBody("${willMessage}")).qosAtLeastOnce.retain(true)) //
     .reconnectAttemptsMax(5) //
     .reconnectDelay(1L) //
     .reconnectBackoffMultiplier(1.5F) //
