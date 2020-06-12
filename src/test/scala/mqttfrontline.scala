@@ -3,15 +3,16 @@ package frontline.mqttsample
 import scala.concurrent.duration._
 import io.gatling.core.Predef._
 import io.gatling.mqtt.Predef._
+import io.gatling.http.Predef._
 
 class MqttSample extends Simulation {
 
-  private val mqttConf = mqtt
-    .mqttVersion_3_1
-    .broker("172.31.32.99", 3700)
+  val mqttConf = mqtt
+    .broker("tcp://MQTT-balancer-91305777aa64bc6f.elb.ap-northeast-1.amazonaws.com", 3700)
+    //.broker("172.31.32.99", 3700)
     //.broker("localhost", 9999)
     .clientId("test")
-    .qosAtLeastOnce
+    //.qosAtLeastOnce
     // .correlateBy(jsonPath("$.correlationId"))
 
   private val scn = scenario("MQTT Test")
@@ -25,6 +26,8 @@ class MqttSample extends Simulation {
     }
     
 
-  setUp(scn.inject(atOnceUsers(10))
-  ).protocols(mqttConf)
+  //setUp(scn.inject(atOnceUsers(10))
+  //).protocols(mqttConf)
+  setUp(scn.inject(rampUsersPerSec(10) to 1000 during (2 minutes)))
+    .protocols(mqttConf)
 }
