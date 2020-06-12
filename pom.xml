@@ -55,6 +55,7 @@
       <groupId>io.gatling.frontline</groupId>
       <artifactId>frontline-probe</artifactId>
       <version>1.7.0</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/io.gatling.frontline/gatling-sigar -->
     <dependency>
       <groupId>io.gatling.frontline</groupId>
