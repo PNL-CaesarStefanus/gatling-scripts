@@ -15,7 +15,7 @@ class LatestMqttSample extends Simulation {
     .useTls(true)
     .clientId("test")
 
-    .clientSession(true) //
+    .cleanSession(true) //
     .keepAlive(30) //
 
     .qosAtLeastOnce
