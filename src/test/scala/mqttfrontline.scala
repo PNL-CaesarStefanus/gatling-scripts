@@ -8,6 +8,7 @@ import io.gatling.http.Predef._
 class MqttSample extends Simulation {
 
   val mqttConf = mqtt
+    .mqttVersion_3_1
     .broker("tcp://MQTT-balancer-91305777aa64bc6f.elb.ap-northeast-1.amazonaws.com", 3700)
     //.broker("172.31.32.99", 3700)
     //.broker("localhost", 9999)
