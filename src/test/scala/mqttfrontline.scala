@@ -12,9 +12,10 @@ class MqttSample extends Simulation {
     .broker("tcp://MQTT-balancer-91305777aa64bc6f.elb.ap-northeast-1.amazonaws.com", 3700)
     //.broker("172.31.32.99", 3700)
     //.broker("localhost", 9999)
+    .useTls(true)
     .clientId("test")
     .qosAtLeastOnce
-    .useTls(true)
+    .timeoutCheckInterval(10 second)
     // .correlateBy(jsonPath("$.correlationId"))
 
   private val scn = scenario("MQTT Test")
